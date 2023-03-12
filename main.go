@@ -38,11 +38,11 @@ func main() {
 	// train a model with the text "this is a mystery text in some lenguaje"
 	// and compare it with the other models
 	mysteryModel := NewModel("mystery")
-	mysteryModel.TrainModelWithText("this is a mystery text in some lenguaje")
+	mysteryModel.TrainModelWithText("Voglio andare a studiare")
 
 	for _, model := range models {
 		// radians
-		r := math.Acos(mysteryModel.CalculateVectorDistance(model))
+		r := mysteryModel.CalculateVectorDistance(model)
 
 		// to degrees
 		d := r * 180 / math.Pi

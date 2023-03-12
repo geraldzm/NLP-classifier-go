@@ -124,5 +124,5 @@ func (m *Model) CalculateVectorDistance(otherModel *Model) float64 {
 		}
 	}
 
-	return float64(dotProduct) / (m.norm * otherModel.norm)
+	return math.Acos(float64(dotProduct) / (m.norm * otherModel.norm))
 }
